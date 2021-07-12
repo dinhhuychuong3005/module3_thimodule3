@@ -117,7 +117,7 @@ public class ProductDAO implements IProductDAO {
 
     @Override
     public List<Product> findByName(String productName) {
-        List<Product> list = null;
+        List<Product> list = new ArrayList<>();
         Connection connection = sqlConnection.getConnection();
         try {
             PreparedStatement statement = connection.prepareStatement(GET_PRODUCT_BY_NAME);
